@@ -24,3 +24,4 @@ Homestead.yaml
 Thumbs.db
 /.ds-xtras
 .phpunit.result.cache
+.php-cs-fixer.cache
