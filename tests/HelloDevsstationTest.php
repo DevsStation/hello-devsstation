@@ -2,15 +2,32 @@
 
 declare(strict_types=1);
 
+namespace Devsstation\HelloDevsstation\Tests;
+
 use PHPUnit\Framework\TestCase;
 use Devsstation\HelloDevsstation\HelloDevsstation;
 
+/**
+ * HelloDevsstationTest class
+ *
+ * This class is used to test the HelloDevsstation class
+ *
+ * @package Devsstation\HelloDevsstation
+ */
 class HelloDevsstationTest extends TestCase
 {
-    public function testSayHello()
+    /**
+     * Test the sayHello method
+     *
+     * @return void
+     */
+    public function testSayHello(): void
     {
         $hello = new HelloDevsstation();
+        // Test the default name
         $this->assertEquals('Hello, DevsStation!', $hello->sayHello());
-        $this->assertEquals('Hello, SK Paul!', $hello->sayHello('SK Paul'));
+        // Test the name as an argument with a different name
+        $name = 'SK Paul';
+        $this->assertEquals('Hello, ' . $name . '!', $hello->sayHello($name));
     }
-} 
+}
