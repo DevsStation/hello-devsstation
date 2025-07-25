@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<ruleset name="HelloDevsstation">
+    <description>PHP CodeSniffer rules for HelloDevsstation package</description>
+
+    <!-- Include PSR-12 standard -->
+    <rule ref="PSR12"/>
+
+    <!-- Include PSR-1 standard -->
+    <rule ref="PSR1"/>
+
+    <!-- Custom rules for strict types -->
+    <rule ref="Generic.Files.InlineHTML"/>
+    <rule ref="Squiz.Functions.GlobalFunction"/>
+    <rule ref="Squiz.Classes.ValidClassName"/>
+    <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing"/>
+    <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterHint"/>
+
+    <!-- Exclude some rules that might conflict with modern PHP -->
+    <rule ref="PSR12.Classes.OpeningBraceSpace">
+        <exclude name="PSR12.Classes.OpeningBraceSpace"/>
+    </rule>
+
+    <!-- Scan these directories -->
+    <file>src/</file>
+    <file>tests/</file>
+
+    <!-- Ignore vendor directory -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>node_modules/*</exclude-pattern>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <!-- Show source codes in all reports -->
+    <arg value="s"/>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="n"/>
+</ruleset> 
