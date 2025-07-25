@@ -19,7 +19,7 @@ class HelloDevsstation
      * @param string $name The name to say hello to
      * @return string The hello message
      */
-    public function sayHello(string $name = 'DevsStation'): string
+    public static function sayHello(string $name = 'DevsStation'): string
     {
         return 'Hello, ' . $name . '!';
     }

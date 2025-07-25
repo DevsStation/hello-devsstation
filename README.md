@@ -15,9 +15,15 @@ composer require devsstation/hello-devsstation
 ```php
 use Devsstation\HelloDevsstation\HelloDevsstation;
 
+// Call as instance method
 $hello = new HelloDevsstation();
 echo $hello->sayHello(); // Output: Hello, DevsStation!
 echo $hello->sayHello('SK Paul'); // Output: Hello, SK Paul!
+
+// Call as static method
+$message = HelloDevsstation::sayHello($name);
+echo $message
+
 ```
 
 ## Testing
